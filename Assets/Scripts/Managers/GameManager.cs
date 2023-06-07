@@ -5,13 +5,14 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     private static GameManager instance;
-    private static PoolManager poolManager;
-    private static ResourceManager resourceManager;
-
+    private static PoolManager pool;
+    private static ResourceManager resource;
+    private static UIManager ui;
     public static GameManager Instance { get { return instance; } }
-    public static PoolManager Pool { get { return poolManager; } }
-    public static ResourceManager Resource { get { return resourceManager; } }
+    public static PoolManager Pool { get { return pool; } }
+    public static ResourceManager Resource { get { return resource; } }
 
+    public static UIManager UI { get { return ui; } }
     private void Awake()
     {
         if (instance != null)
@@ -33,14 +34,19 @@ public class GameManager : MonoBehaviour
 
     private void InitManagers()
     {
-        GameObject poolObj = new GameObject();
-        poolObj.name = "PoolManager";
-        poolObj.transform.parent = transform;
-        poolManager = poolObj.AddComponent<PoolManager>();
-
         GameObject resourceObj = new GameObject();
         resourceObj.name = "ResourceManager";
         resourceObj.transform.parent = transform;
-        resourceManager = resourceObj.AddComponent<ResourceManager>();
+        resource = resourceObj.AddComponent<ResourceManager>();
+
+        GameObject poolObj = new GameObject();
+        poolObj.name = "PoolManager";
+        poolObj.transform.parent = transform;
+        pool = poolObj.AddComponent<PoolManager>();
+        
+        GameObject uiObj = new GameObject();
+        uiObj.name = "UIManager";
+        uiObj.transform.parent = transform;
+        ui = uiObj.AddComponent<UIManager>();
     }
 }
