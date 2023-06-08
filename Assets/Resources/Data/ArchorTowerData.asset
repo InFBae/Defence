@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ffece7b0142c534c9c9eb5a73bdcd90, type: 3}
+  m_Name: ArchorTowerData
+  m_EditorClassIdentifier: 
+  towers:
+  - tower: {fileID: 8842442171013713079, guid: 7e190d375721e3c4fa959217bf70e118, type: 3}
+    damage: 1
+    delay: 1
+    range: 20
+    buildTime: 1
+    buildCost: 10
+    sellCost: 5
+  - tower: {fileID: 6771746599844787499, guid: 6cad21a1d3d716d4f99ecd2e3840aa9a, type: 3}
+    damage: 2
+    delay: 0.8
+    range: 22
+    buildTime: 2
+    buildCost: 20
+    sellCost: 10
+  - tower: {fileID: 7258126005292726927, guid: 0f8f1be2269807a41b2451dbe3b4811f, type: 3}
+    damage: 3
+    delay: 0.6
+    range: 24
+    buildTime: 3
+    buildCost: 30
+    sellCost: 15
+  - tower: {fileID: -6724748496274365959, guid: 26c04c17145d1ad4e927def742e29dc3, type: 3}
+    damage: 4
+    delay: 0.4
+    range: 26
+    buildTime: 4
+    buildCost: 40
+    sellCost: 20
+  - tower: {fileID: -426702972170280403, guid: 420d104638342074b975105d1d149c8d, type: 3}
+    damage: 8
+    delay: 0.4
+    range: 26
+    buildTime: 4
+    buildCost: 40
+    sellCost: 20

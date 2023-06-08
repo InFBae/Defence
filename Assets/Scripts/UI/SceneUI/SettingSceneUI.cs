@@ -8,14 +8,14 @@ public class SettingSceneUI : SceneUI
     {
         base.Awake();
 
-        buttons["InfoButton"].onClick.AddListener(ClickInfoButton);
+        buttons["InfoButton"].onClick.AddListener(OpenInfoWindowUI);
         buttons["VolumeButton"].onClick.AddListener(() => { Debug.Log("Volume"); });
         buttons["SettingButton"].onClick.AddListener(() => { OpenPausePopUpUI(); });
     }
 
-    public void ClickInfoButton()
+    public void OpenInfoWindowUI()
     {
-        Debug.Log("Info");
+        GameManager.UI.ShowWindowUI<WindowUI>("UI/InfoWindowUI");
     }
 
     public void OpenPausePopUpUI()
